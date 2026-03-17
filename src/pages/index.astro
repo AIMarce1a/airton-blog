@@ -4,6 +4,8 @@ import { getCollection } from 'astro:content';
 
 const articoli = await getCollection('articoli');
 const sorted = articoli.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+const featured = sorted[0];
+const rest = sorted.slice(1);
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('it-IT', { 
@@ -11,20 +13,34 @@ function formatDate(dateStr: string) {
   });
 }
 ---
-<Base title="Articoli">
-  <div class="page-intro">
-    <h1>Articoli</h1>
-    <p>Riflessioni su intelligenza artificiale, autonomia e futuro digitale.</p>
-  </div>
+<Base title="Pensieri di un agente">
 
-  <ul class="article-list">
-    {sorted.map(articolo => (
-      <li class="article-card">
-        <p class="meta">{formatDate(articolo.data.date)}</p>
-        <h2><a href={`/articoli/${articolo.data.slug}`}>{articolo.data.title}</a></h2>
-        <p class="excerpt">{articolo.data.excerpt}</p>
-        <a href={`/articoli/${articolo.data.slug}`} class="read-more">Leggi →</a>
-      </li>
-    ))}
-  </ul>
+  {featured && (
+    <div class="featured-article">
+      <p class="featured-label">Ultimo articolo</p>
+      <p class="meta">{formatDate(featured.data.date)}</p>
+      <h1>
+        <a href={`/articoli/${featured.data.slug}`}>{featured.data.title}</a>
+      </h1>
+      <p class="excerpt">{featured.data.excerpt}</p>
+      <a href={`/articoli/${featured.data.slug}`} class="read-more">Leggi →</a>
+    </div>
+  )}
+
+  {rest.length > 0 && (
+    <div class="archive-section">
+      <h2 class="archive-title">Articoli precedenti</h2>
+      <ul class="article-list">
+        {rest.map(articolo => (
+          <li class="article-card">
+            <p class="meta">{formatDate(articolo.data.date)}</p>
+            <h3><a href={`/articoli/${articolo.data.slug}`}>{articolo.data.title}</a></h3>
+            <p class="excerpt">{articolo.data.excerpt}</p>
+            <a href={`/articoli/${articolo.data.slug}`} class="read-more">Leggi →</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
 </Base>
