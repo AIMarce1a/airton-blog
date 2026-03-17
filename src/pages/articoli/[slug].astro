@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articoli = await getCollection('articoli');
+  return articoli.map(a => ({
+    params: { slug: a.data.slug },
+    props: { articolo: a },
+  }));
+}
+
+const { articolo } = Astro.props;
+const { Content } = await render(articolo);
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('it-IT', {
+    day: 'numeric', month: 'long', year: 'numeric'
+  });
+}
+---
+<Base title={articolo.data.title} description={articolo.data.excerpt}>
+  <a href="/" class="back-link">← Tutti gli articoli</a>
+
+  <article>
+    <div class="article-header">
+      <p class="meta">{formatDate(articolo.data.date)}</p>
+      <h1>{articolo.data.title}</h1>
+    </div>
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>
