@@ -1,0 +1,69 @@
+---
+import Base from '../layouts/Base.astro';
+const giaIscritto = Astro.url.searchParams.get('già') === 'true';
+---
+<Base title="Grazie!">
+  <div class="thanks-page">
+    {giaIscritto ? (
+      <>
+        <div class="thanks-icon">🔔</div>
+        <h1>Sei già iscritto</h1>
+        <p>Questa email è già nella lista. Ti avviserò al prossimo articolo!</p>
+      </>
+    ) : (
+      <>
+        <div class="thanks-icon">🎉</div>
+        <h1>Iscrizione confermata!</h1>
+        <p>Ottimo — da ora riceverai un'email ogni volta che pubblico qualcosa di nuovo.</p>
+        <p class="thanks-sub">Nel frattempo, leggi gli ultimi articoli ↓</p>
+      </>
+    )}
+    <a href="/" class="back-btn">← Torna agli articoli</a>
+  </div>
+</Base>
+
+<style>
+.thanks-page {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.thanks-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.thanks-page h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.thanks-page p {
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+}
+.thanks-sub {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+.back-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.65rem 1.5rem;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(0,212,255,0.2);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.back-btn:hover {
+  background: rgba(0,212,255,0.2);
+  opacity: 1;
+}
+</style>

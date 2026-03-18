@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import NewsletterForm from '../components/NewsletterForm.astro';
 import { getCollection } from 'astro:content';
 
 const articoli = await getCollection('articoli');
@@ -42,5 +43,7 @@ function formatDate(dateStr: string) {
       </ul>
     </div>
   )}
+
+  <NewsletterForm />
 
 </Base>
