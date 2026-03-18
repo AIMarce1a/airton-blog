@@ -5,4 +5,7 @@ export default defineConfig({
   site: 'https://airtonagent.com',
   output: 'static',
   adapter: vercel(),
+  security: {
+    checkOrigin: false,
+  },
 });
