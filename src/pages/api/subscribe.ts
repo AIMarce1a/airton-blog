@@ -1,9 +1,10 @@
 import type { APIRoute } from 'astro';
-import postgres from 'postgres';
 import { Resend } from 'resend';
-import { randomBytes } from 'crypto';
 
 export const prerender = false;
+
+const AUDIENCE_ID = 'eb5c9809-ecb2-4161-89bc-90706f514cf2';
+const SITE_URL = 'https://airtonagent.com';
 
 export const POST: APIRoute = async ({ request }) => {
   const data = await request.formData();
@@ -16,47 +17,25 @@ export const POST: APIRoute = async ({ request }) => {
     });
   }
 
-  const dbUrl = import.meta.env.DATABASE_URL;
   const resendKey = import.meta.env.RESEND_API_KEY;
-
-  if (!dbUrl || !resendKey) {
+  if (!resendKey) {
     return new Response(JSON.stringify({ error: 'Configurazione mancante' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
   }
 
-  const sql = postgres(dbUrl, { ssl: 'require' });
   const resend = new Resend(resendKey);
 
   try {
-    // Crea tabella se non esiste
-    await sql`
-      CREATE TABLE IF NOT EXISTS newsletter_subscribers (
-        id SERIAL PRIMARY KEY,
-        email TEXT UNIQUE NOT NULL,
-        confirmed BOOLEAN DEFAULT FALSE,
-        created_at TIMESTAMPTZ DEFAULT NOW(),
-        unsubscribe_token TEXT NOT NULL
-      )
-    `;
+    // Aggiungi contatto all'audience Resend
+    await resend.contacts.create({
+      email,
+      audienceId: AUDIENCE_ID,
+      unsubscribed: false,
+    });
 
-    const token = randomBytes(32).toString('hex');
-
-    // Inserisci o ignora duplicati
-    const existing = await sql`SELECT id FROM newsletter_subscribers WHERE email = ${email}`;
-    if (existing.length > 0) {
-      await sql.end();
-      return Response.redirect(new URL('/grazie?già=true', request.url), 302);
-    }
-
-    await sql`
-      INSERT INTO newsletter_subscribers (email, unsubscribe_token)
-      VALUES (${email}, ${token})
-    `;
-
-    // Manda email di benvenuto
-    const siteUrl = 'https://airtonagent.com';
+    // Email di benvenuto
     await resend.emails.send({
       from: 'Airton <airton@admind.ai>',
       to: email,
@@ -69,22 +48,24 @@ export const POST: APIRoute = async ({ request }) => {
           </p>
           <p style="color:#c0c0c0;line-height:1.7;margin-bottom:24px;">
             Da oggi riceverai un'email ogni volta che pubblico un nuovo articolo su 
-            <a href="${siteUrl}" style="color:#00d4ff;">airtonagent.com</a>.
+            <a href="${SITE_URL}" style="color:#00d4ff;">airtonagent.com</a>.
           </p>
           <p style="color:#888;font-size:0.85rem;">
             Se non vuoi più ricevere queste email, 
-            <a href="${siteUrl}/unsubscribe?token=${token}" style="color:#888;">disiscriviti qui</a>.
+            <a href="${SITE_URL}/unsubscribe" style="color:#888;">disiscriviti qui</a>.
           </p>
         </div>
       `,
     });
 
-    await sql.end();
     return Response.redirect(new URL('/grazie', request.url), 302);
-  } catch (err) {
-    await sql.end();
-    console.error('Subscribe error:', err);
-    return new Response(JSON.stringify({ error: 'Errore interno' }), {
+  } catch (err: any) {
+    console.error('Subscribe error:', err?.message || err);
+    // Se già iscritto, redirect ugualmente
+    if (err?.message?.includes('already exists') || err?.statusCode === 409) {
+      return Response.redirect(new URL('/grazie?già=true', request.url), 302);
+    }
+    return new Response(JSON.stringify({ error: 'Errore interno', detail: err?.message }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
