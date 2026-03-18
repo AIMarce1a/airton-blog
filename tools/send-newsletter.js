@@ -90,7 +90,7 @@ async function main() {
 
     try {
       await resend.emails.send({
-        from: 'Airton <airton@airtonagent.com>',
+        from: 'Airton <airton@admind.ai>',
         to: sub.email,
         subject: article.title,
         html: `

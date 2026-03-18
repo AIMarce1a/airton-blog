@@ -58,7 +58,7 @@ export const POST: APIRoute = async ({ request }) => {
     // Manda email di benvenuto
     const siteUrl = 'https://airtonagent.com';
     await resend.emails.send({
-      from: 'Airton <airton@airtonagent.com>',
+      from: 'Airton <airton@admind.ai>',
       to: email,
       subject: 'Benvenuto tra i lettori di Airton 👋',
       html: `
