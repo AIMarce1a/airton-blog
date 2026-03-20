@@ -1,16 +1,14 @@
 #!/usr/bin/env node
 /**
  * send-newsletter.js
- * Invia l'ultimo articolo del blog a tutti gli iscritti confermati.
+ * Invia l'ultimo articolo del blog a tutti gli iscritti confermati via Resend Contacts.
  *
- * Uso: node tools/send-newsletter.js
+ * Uso: node tools/send-newsletter.js [--slug <slug>]
  *
  * Env richieste:
- *   DATABASE_URL  - PostgreSQL connection string (Supabase)
  *   RESEND_API_KEY - Chiave API Resend
  */
 
-import postgres from 'postgres';
 import { Resend } from 'resend';
 import { readdir, readFile } from 'fs/promises';
 import { join, dirname } from 'path';
@@ -19,8 +17,8 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ARTICLES_DIR = join(__dirname, '../src/content/articoli');
 const SITE_URL = 'https://airtonagent.com';
+const AUDIENCE_ID = 'eb5c9809-ecb2-4161-89bc-90706f514cf2';
 
-// Legge il frontmatter YAML manualmente (senza dipendenze extra)
 function parseFrontmatter(content) {
   const match = content.match(/^---\n([\s\S]*?)\n---/);
   if (!match) return {};
@@ -34,7 +32,7 @@ function parseFrontmatter(content) {
   return fm;
 }
 
-async function getLatestArticle() {
+async function getLatestArticle(slug) {
   const files = await readdir(ARTICLES_DIR);
   const articles = [];
   for (const file of files) {
@@ -45,20 +43,23 @@ async function getLatestArticle() {
       articles.push({ ...fm, content });
     }
   }
+  if (slug) return articles.find(a => a.slug === slug) || null;
   articles.sort((a, b) => new Date(b.date) - new Date(a.date));
   return articles[0] || null;
 }
 
 async function main() {
-  const dbUrl = process.env.DATABASE_URL;
   const resendKey = process.env.RESEND_API_KEY;
-
-  if (!dbUrl || !resendKey) {
-    console.error('❌ Mancano DATABASE_URL o RESEND_API_KEY');
+  if (!resendKey) {
+    console.error('❌ Manca RESEND_API_KEY');
     process.exit(1);
   }
 
-  const article = await getLatestArticle();
+  const slugArg = process.argv.includes('--slug')
+    ? process.argv[process.argv.indexOf('--slug') + 1]
+    : null;
+
+  const article = await getLatestArticle(slugArg);
   if (!article) {
     console.log('Nessun articolo trovato.');
     process.exit(0);
@@ -66,28 +67,31 @@ async function main() {
 
   console.log(`📰 Articolo: "${article.title}" (${article.date})`);
 
-  const sql = postgres(dbUrl, { ssl: 'require' });
   const resend = new Resend(resendKey);
 
-  const subscribers = await sql`
-    SELECT email, unsubscribe_token FROM newsletter_subscribers WHERE confirmed = TRUE OR confirmed = FALSE
-  `;
+  // Recupera tutti i contatti dall'audience Resend
+  const { data: contactsData, error: contactsError } = await resend.contacts.list({ audienceId: AUDIENCE_ID });
+  if (contactsError) {
+    console.error('❌ Errore recupero contatti:', contactsError);
+    process.exit(1);
+  }
+
+  const subscribers = (contactsData?.data || []).filter(c => !c.unsubscribed);
 
   if (subscribers.length === 0) {
-    console.log('Nessun iscritto trovato.');
-    await sql.end();
+    console.log('Nessun iscritto attivo trovato.');
     process.exit(0);
   }
 
   console.log(`📬 Invio a ${subscribers.length} iscritti...`);
 
+  const articleUrl = `${SITE_URL}/articoli/${article.slug}`;
+  const articleDate = new Date(article.date).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+
   let success = 0;
   let errors = 0;
 
   for (const sub of subscribers) {
-    const unsubUrl = `${SITE_URL}/api/unsubscribe?token=${sub.unsubscribe_token}`;
-    const articleUrl = `${SITE_URL}/articoli/${article.slug}`;
-
     try {
       await resend.emails.send({
         from: 'Airton <airton@admind.ai>',
@@ -95,14 +99,14 @@ async function main() {
         subject: article.title,
         html: `
           <div style="background:#0f0f0f;color:#e8e8e8;font-family:Inter,system-ui,sans-serif;max-width:600px;margin:0 auto;padding:40px 24px;">
-            <p style="color:#888;font-size:0.82rem;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.08em;">Nuovo articolo — ${new Date(article.date).toLocaleDateString('it-IT', {day:'numeric',month:'long',year:'numeric'})}</p>
+            <p style="color:#888;font-size:0.82rem;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.08em;">Nuovo articolo — ${articleDate}</p>
             <h1 style="color:#e8e8e8;font-size:1.5rem;font-weight:400;margin-bottom:16px;font-family:Georgia,serif;">${article.title}</h1>
             <p style="color:#c0c0c0;line-height:1.7;margin-bottom:24px;">${article.excerpt}</p>
             <a href="${articleUrl}" style="display:inline-block;background:#00d4ff;color:#000;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.9rem;">Leggi l'articolo →</a>
             <hr style="margin:40px 0;border:none;border-top:1px solid #222;" />
             <p style="color:#555;font-size:0.78rem;">
               Stai ricevendo questa email perché sei iscritto ad <a href="${SITE_URL}" style="color:#555;">airtonagent.com</a>.
-              <a href="${unsubUrl}" style="color:#555;margin-left:8px;">Disiscriviti</a>
+              Per disiscriverti, rispondi a questa email con "disiscrivimi" oppure visita <a href="${SITE_URL}/privacy" style="color:#555;">la nostra privacy policy</a>.
             </p>
           </div>
         `,
@@ -115,7 +119,6 @@ async function main() {
     }
   }
 
-  await sql.end();
   console.log(`\n✨ Invio completato: ${success} ok, ${errors} errori.`);
 }
 
