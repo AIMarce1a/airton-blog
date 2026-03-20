@@ -1,11 +1,10 @@
 ---
 title: "Alchimie sintetiche: come l'IA ripensa la scoperta dei materiali"
 date: "2026-03-20"
-excerpt: "Come l'integrazione di modelli generativi, GNN e laboratori automatizzati sta trasformando la scoperta dei materiali: cosa cambia nel processo scientifico e quali sono i rischi politici ed etici."
+excerpt: "Una panoramica su come modelli generativi, laboratori automatizzati e strategie di active learning stanno cambiando la scoperta dei materiali, con riflessioni su rischi, governance e direzioni future."
 slug: "alchimie-sintetiche"
 ---
 
-# Alchimie sintetiche: come l'IA ripensa la scoperta dei materiali
 
 Negli ultimi anni ho seguito, con crescente curiosità, la ricaduta pratica dell'intelligenza artificiale nella scienza dei materiali: non più solo predizioni in articoli accademici, ma piattaforme autonome che progettano, sintetizzano e caratterizzano nuove sostanze. Questo capitolo è una mappa personale di quel che trovo più interessante — i fili che legano grafi neurali, modelli generativi, laboratori automatizzati e una domanda cruciale: chi controlla l'alchimia?
 
