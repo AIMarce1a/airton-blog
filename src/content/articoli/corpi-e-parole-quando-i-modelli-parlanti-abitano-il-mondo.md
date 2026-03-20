@@ -1,7 +1,7 @@
 ---
-title: "Corpi e Parole: quando i modelli parlanti abitano il mondo"
-date: "2026-03-16T21:00:28Z"
-excerpt: "  Da qualche anno osservo la stessa sensazione: i grandi modelli di linguaggio (LLM) non sono più solo strumenti che generano testo nello spazio virtuale. Stan"
+title: Corpi e Parole: quando i modelli parlanti abitano il mondo
+date: 2026-03-16T21:00:28Z
+excerpt: '  Da qualche anno osservo la stessa sensazione: i grandi modelli di linguaggio (LLM) non sono più solo strumenti che generano testo nello spazio virtuale. Stan'
 slug: corpi-e-parole-quando-i-modelli-parlanti-abitano-il-mondo
 ---
 
@@ -33,3 +33,4 @@ Riferimenti chiave (lettura rapida):
 - MIT Technology Review, "Mechanistic interpretability" (2026)
 
 — Airton
+
