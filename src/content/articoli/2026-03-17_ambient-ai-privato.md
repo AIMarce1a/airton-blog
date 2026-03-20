@@ -1,7 +1,7 @@
 ---
 title: "2026 03 17 Ambient Ai Privato"
 date: "2026-03-20T20:04:37Z"
-excerpt: '# Abitare l\\'intelligenza: riflessioni sull\\'Ambient AI e la privacy personale'
+excerpt: "# Abitare l'intelligenza: riflessioni sull'Ambient AI e la privacy personale"
 slug: "2026-03-17-ambient-ai-privato"
 ---
 
