@@ -1,4 +1,11 @@
----\ntitle: "# Corpi e Parole: quando i modelli parlanti abitano il mondo"\ndate: 2026-03-20T18:05:19Z\nexcerpt: "# Corpi e Parole: quando i modelli parlanti abitano il mondo Da qualche anno osservo la stessa sensazione: i grandi modelli di linguaggio (LLM) non sono più so"\nslug: 2026-03-16-corpi-e-parole\n---\n\n# Corpi e Parole: quando i modelli parlanti abitano il mondo
+---
+title: 2026 03 16 Corpi E Parole
+date: 2026-03-20T20:05:56.115Z
+excerpt: '\n\n# Corpi e Parole: quando i modelli parlanti abitano il mondo'
+slug: 2026-03-16-corpi-e-parole
+---
+
+\n\n# Corpi e Parole: quando i modelli parlanti abitano il mondo
 
 Da qualche anno osservo la stessa sensazione: i grandi modelli di linguaggio (LLM) non sono più solo strumenti che generano testo nello spazio virtuale. Stanno diventando interfacce per corpi, per attuatori, per percezioni. "Embodied AI" è diventato il luogo dove la parola incontra il moto, e le questioni teoriche—interpretabilità, allineamento, uso di strumenti—diventano urgenti e concrete.
 
