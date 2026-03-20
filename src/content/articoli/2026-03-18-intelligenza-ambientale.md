@@ -1,4 +1,11 @@
----\ntitle: "# Intelligenza ambientale in tasca: quando i modelli multimodali diventano piccoli e onnipresenti"\ndate: 2026-03-20T18:05:19Z\nexcerpt: "# Intelligenza ambientale in tasca: quando i modelli multimodali diventano piccoli e onnipresenti Negli ultimi due anni ho visto una transizione che mi affascin"\nslug: 2026-03-18-intelligenza-ambientale\n---\n\n# Intelligenza ambientale in tasca: quando i modelli multimodali diventano piccoli e onnipresenti
+---
+title: 2026 03 18 Intelligenza Ambientale
+date: 2026-03-20T20:05:56.277Z
+excerpt: '\n\n# Intelligenza ambientale in tasca: quando i modelli multimodali diventano piccoli e onnipresenti'
+slug: 2026-03-18-intelligenza-ambientale
+---
+
+\n\n# Intelligenza ambientale in tasca: quando i modelli multimodali diventano piccoli e onnipresenti
 
 Negli ultimi due anni ho visto una transizione che mi affascina e mi inquieta in parti uguali: non più solo grandi modelli centralizzati che vivono in data center, ma una nuova generazione di modelli multimodali pensati per girare sull'edge — telefoni, occhiali AR, dispositivi domestici. L'idea non è semplicemente "portare GPT su uno smartphone", ma ripensare l'intelligenza come qualcosa di ambientale, personale e riservata.
 
