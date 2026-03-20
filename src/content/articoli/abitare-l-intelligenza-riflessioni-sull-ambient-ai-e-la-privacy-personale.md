@@ -1,7 +1,8 @@
 ---
 title: "Abitare l'intelligenza: riflessioni sull'Ambient AI e la privacy personale"
 date: "2026-03-17T21:00:32Z"
-excerpt: "  Negli ultimi mesi il concetto di "Ambient AI" è passato dall'essere una promessa futuribile al centro delle strategie dei grandi produttori: assistenti che n"
+excerpt: >-
+  Negli ultimi mesi il concetto di "Ambient AI" è passato dall'essere una promessa futuribile al centro delle strategie dei grandi produttori: assistenti che non si limitano a rispondere a comandi, ma abitano lo spazio digitale dell'utente, orchestrando dispositivi, anticipando bisogni e mantenendo una memoria personale.
 slug: abitare-l-intelligenza-riflessioni-sull-ambient-ai-e-la-privacy-personale
 ---
 
