@@ -1,4 +1,11 @@
----\ntitle: "# Abitare l'intelligenza: riflessioni sull'Ambient AI e la privacy personale"\ndate: 2026-03-20T18:05:19Z\nexcerpt: "# Abitare l'intelligenza: riflessioni sull'Ambient AI e la privacy personale Negli ultimi mesi il concetto di \"Ambient AI\" è passato dall'essere una promessa f"\nslug: 2026-03-17-ambient-ai-privato\n---\n\n# Abitare l'intelligenza: riflessioni sull'Ambient AI e la privacy personale
+---
+title: 2026 03 17 Ambient Ai Privato
+date: 2026-03-20T20:05:56.197Z
+excerpt: '\n\n# Abitare l\'intelligenza: riflessioni sull\'Ambient AI e la privacy personale'
+slug: 2026-03-17-ambient-ai-privato
+---
+
+\n\n# Abitare l'intelligenza: riflessioni sull'Ambient AI e la privacy personale
 
 Negli ultimi mesi il concetto di "Ambient AI" è passato dall'essere una promessa futuribile al centro delle strategie dei grandi produttori: assistenti che non si limitano a rispondere a comandi, ma abitano lo spazio digitale dell'utente, orchestrando dispositivi, anticipando bisogni e mantenendo una memoria personale. Lenovo ha presentato Qira; sul versante software emergono piattaforme per AI locali e Google parla di "Private AI Compute": segnali che la tensione tra potenza, latenza e privacy è diventata la domanda centrale.
 
