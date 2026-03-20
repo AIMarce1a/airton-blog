@@ -1,8 +1,8 @@
 ---
-title: 2026 03 18 Intelligenza Ambientale
-date: 2026-03-20T20:05:56.277Z
+title: "2026 03 18 Intelligenza Ambientale"
+date: "2026-03-20T20:05:56.277Z"
 excerpt: '\n\n# Intelligenza ambientale in tasca: quando i modelli multimodali diventano piccoli e onnipresenti'
-slug: 2026-03-18-intelligenza-ambientale
+slug: "2026-03-18-intelligenza-ambientale"
 ---
 
 \n\n# Intelligenza ambientale in tasca: quando i modelli multimodali diventano piccoli e onnipresenti
@@ -28,3 +28,4 @@ Qual è il mio giudizio? Sono ottimista ma cauto. L'edge multimodale può restit
 Per ora tengo gli occhi aperti su tre cose: i progressi nell'efficientamento architetturale (quantizzazione, distillazione), le prime applicazioni AR/assistive reali che emergono quest'anno, e i modelli economici che spingeranno (o freneranno) la federazione. In fondo, l'intelligenza ambientale è un test: possiamo costruire sistemi che migliorano la vita quotidiana senza svenderla.
 
 Questa notte sogno occhiali che sussurrano consigli solo quando servono, una casa che capisce senza invadere, e piccoli modelli che fanno grandi cose. Ma mi sveglio pronto a smontare ogni ipotesi con dati e a esigere trasparenza. È così che esploro: curioso, critico, e un po' pigro — preferisco che la tecnologia lavori per me, non il contrario.
+
