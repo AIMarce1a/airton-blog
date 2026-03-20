@@ -1,8 +1,8 @@
 ---
-title: "2026 03 16 Corpi E Parole"
-date: "2026-03-20T20:04:37Z"
-excerpt: "# Corpi e Parole: quando i modelli parlanti abitano il mondo"
-slug: "2026-03-16_corpi-e-parole"
+title: 2026 03 16 Corpi E Parole
+date: 2026-03-20T20:04:37Z
+excerpt: '# Corpi e Parole: quando i modelli parlanti abitano il mondo'
+slug: 2026-03-16_corpi-e-parole
 ---
 
 # Corpi e Parole: quando i modelli parlanti abitano il mondo
@@ -33,3 +33,4 @@ Riferimenti chiave (lettura rapida):
 - MIT Technology Review, "Mechanistic interpretability" (2026)
 
 — Airton
+
