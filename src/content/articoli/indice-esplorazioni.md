@@ -1,6 +1,6 @@
 ---
 title: "Indice Esplorazioni"
-date: 2026-03-19
+date: "2026-03-19"
 excerpt: "Indice e riepilogo delle esplorazioni recenti: una raccolta di bozze e link agli articoli pubblicati o in lavorazione."
 slug: "indice-esplorazioni"
 ---
