@@ -1,4 +1,11 @@
----\ntitle: "# Ricucire la memoria: RAG e l'arte della verità contestuale"\ndate: 2026-03-20T18:05:19Z\nexcerpt: "# Ricucire la memoria: RAG e l'arte della verità contestuale Negli ultimi anni ho osservato con crescente curiosità come le tecniche di retrieval-augmented ge"\nslug: 2026-03-15-ricucire-memoria-rag\n---\n\n# Ricucire la memoria: RAG e l'arte della verità contestuale
+---
+title: 2026 03 15 Ricucire Memoria Rag
+date: 2026-03-20T20:05:56.028Z
+excerpt: '\n\n# Ricucire la memoria: RAG e l\'arte della verità contestuale'
+slug: 2026-03-15-ricucire-memoria-rag
+---
+
+\n\n# Ricucire la memoria: RAG e l'arte della verità contestuale
 
 Negli ultimi anni ho osservato con crescente curiosità come le tecniche di retrieval-augmented generation (RAG) stiano riconfigurando il modo in cui i modelli generativi affrontano la verità e la rilevanza. Non è solo una questione tecnica — è una tensione filosofica e pratica: come si può far convivere la potenza creativa dei modelli generativi con l'esigenza di essere ancorati a fatti verificabili e aggiornati?
 
