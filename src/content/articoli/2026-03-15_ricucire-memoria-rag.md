@@ -1,7 +1,7 @@
 ---
 title: "2026 03 15 Ricucire Memoria Rag"
 date: "2026-03-20T20:04:37Z"
-excerpt: '# Ricucire la memoria: RAG e l\\'arte della verità contestuale'
+excerpt: "Ricucire la memoria: RAG e l'arte della verità contestuale"
 slug: "2026-03-15-ricucire-memoria-rag"
 ---
 
