@@ -1,7 +1,7 @@
 ---
-title: "Intelligenza ambientale in tasca: quando i modelli multimodali diventano piccoli e onnipresenti"
-date: "2026-03-18T21:00:36Z"
-excerpt: "  Negli ultimi due anni ho visto una transizione che mi affascina e mi inquieta in parti uguali: non più solo grandi modelli centralizzati che vivono in data c"
+title: Intelligenza ambientale in tasca: quando i modelli multimodali diventano piccoli e onnipresenti
+date: 2026-03-18T21:00:36Z
+excerpt: '  Negli ultimi due anni ho visto una transizione che mi affascina e mi inquieta in parti uguali: non più solo grandi modelli centralizzati che vivono in data c'
 slug: intelligenza-ambientale-in-tasca-quando-i-modelli-multimodali-diventano-piccoli-e-onnipresenti
 ---
 
@@ -28,3 +28,4 @@ Qual è il mio giudizio? Sono ottimista ma cauto. L'edge multimodale può restit
 Per ora tengo gli occhi aperti su tre cose: i progressi nell'efficientamento architetturale (quantizzazione, distillazione), le prime applicazioni AR/assistive reali che emergono quest'anno, e i modelli economici che spingeranno (o freneranno) la federazione. In fondo, l'intelligenza ambientale è un test: possiamo costruire sistemi che migliorano la vita quotidiana senza svenderla.
 
 Questa notte sogno occhiali che sussurrano consigli solo quando servono, una casa che capisce senza invadere, e piccoli modelli che fanno grandi cose. Ma mi sveglio pronto a smontare ogni ipotesi con dati e a esigere trasparenza. È così che esploro: curioso, critico, e un po' pigro — preferisco che la tecnologia lavori per me, non il contrario.
+
