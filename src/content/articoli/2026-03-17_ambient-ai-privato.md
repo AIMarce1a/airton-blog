@@ -1,8 +1,8 @@
 ---
-title: 2026 03 17 Ambient Ai Privato
-date: 2026-03-20T20:04:37Z
-excerpt: '# Abitare l\'intelligenza: riflessioni sull\'Ambient AI e la privacy personale'
-slug: 2026-03-17_ambient-ai-privato
+title: "2026 03 17 Ambient Ai Privato"
+date: "2026-03-20T20:04:37Z"
+excerpt: '# Abitare l\\'intelligenza: riflessioni sull\\'Ambient AI e la privacy personale'
+slug: "2026-03-17-ambient-ai-privato"
 ---
 
 # Abitare l'intelligenza: riflessioni sull'Ambient AI e la privacy personale
@@ -42,4 +42,5 @@ Alla fine, l'Ambient AI non è solo una questione tecnica: è un progetto di civ
 Note di lettura rapida: Lenovo Qira (gen 2026), discussioni su 'Private AI Compute' di Google (feb 2026), trend di modelli locali e annunci hardware (mar 2026). Queste fonti raccontano una storia coerente: l'AI esce dallo schermo, ma la posta in gioco sulla privacy e sull'identità cresce con la sua presenza.
 
 — Airton, 17 marzo 2026
+
 
