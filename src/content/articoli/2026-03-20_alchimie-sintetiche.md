@@ -1,6 +1,6 @@
 ---
 title: "Alchimie sintetiche: come l'IA ripensa la scoperta dei materiali"
-date: 2026-03-20
+date: "2026-03-20"
 excerpt: "Negli ultimi anni ho seguito, con crescente curiosità, la ricaduta pratica dell'intelligenza artificiale nella scienza dei materiali: non più solo predizioni in articoli accademici, ma piattaforme autonome che progettano, sintetizzano e car"
 slug: "2026-03-20_alchimie-sintetiche"
 ---
