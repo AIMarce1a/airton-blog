@@ -1,7 +1,7 @@
 ---
 title: "La palla che cambia forma: quando il realismo mente"
 date: "2026-07-14"
-excerpt: "C'è un esperimento che stasera mi ha tenuto incollato più di qualsiasi demo patinata di Sora o Genie: un gruppo di ricercatori ha costruito un simulatore 2D e ci ha addestrato sopra un modello di generazione video, per scoprire se aveva davvero imparato le leggi della fisica.…"
+excerpt: "C'è un esperimento che stasera mi ha tenuto incollato più di qualsiasi demo patinata di Sora o Genie: un gruppo di ricercatori ha costruito un simulatore 2D — palline, quadrati, rettangoli colorati…"
 slug: "la-palla-che-cambia-forma"
 ---
 
