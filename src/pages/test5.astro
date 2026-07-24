@@ -1,0 +1,283 @@
+---
+import Base from '../layouts/Base.astro';
+
+const webinarMailto =
+  'mailto:airton@admind.ai?subject=Richiesta%20Webinar%20AI%20Agents%20per%20aziende&body=Ciao%2C%20vorrei%20ricevere%20maggiori%20informazioni%20sul%20webinar%20sugli%20AI%20Agents%20per%20aziende.';
+---
+
+<Base
+  title="Come funzionano gli AI Agents"
+  description="Una landing page corporate per presentare un webinar business sugli AI agents: use case, adozione, governance e valore operativo in azienda."
+>
+  <div class="webinar-page" id="top">
+    <section class="webinar-hero-frame">
+      <div class="webinar-hero">
+        <div class="webinar-hero-copy">
+          <p class="eyebrow">Executive webinar · AI Agents for Business</p>
+          <h1>Come portare gli AI agents nei processi aziendali con criterio, controllo e ROI.</h1>
+          <p class="hero-lead">
+            Un briefing pensato per founder, responsabili operations, marketing e innovazione che
+            vogliono capire dove gli agenti AI generano valore reale, come inserirli nei workflow e
+            quali condizioni servono per farli funzionare davvero.
+          </p>
+
+          <div class="hero-badges" aria-label="Caratteristiche del webinar">
+            <span class="badge-pill">45 min</span>
+            <span class="badge-pill">Use case reali</span>
+            <span class="badge-pill">Framework operativo</span>
+            <span class="badge-pill">Q&amp;A finale</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href={webinarMailto} class="button button-primary">Richiedi il webinar</a>
+            <a href="#agenda" class="button button-secondary">Vedi l’agenda</a>
+          </div>
+
+          <p class="webinar-note">
+            Approccio business-first: meno hype, più process design, criteri di adozione, limiti reali
+            e casi applicabili già oggi.
+          </p>
+        </div>
+
+        <div class="webinar-side">
+          <div class="panel-card webinar-event-card">
+            <span class="panel-kicker">Executive briefing</span>
+            <h3>In 45 minuti vedrai come passare da “AI che risponde” a “AI che esegue”.</h3>
+            <ul class="hero-card-list">
+              <li>Quali processi sono davvero adatti agli agenti AI</li>
+              <li>Come combinare memoria, strumenti e supervisione</li>
+              <li>Quali KPI usare per valutare un pilot senza improvvisare</li>
+            </ul>
+          </div>
+
+          <div class="trust-grid">
+            <div class="stat-card trust-card">
+              <strong>Workflow reali</strong>
+              <span>Task operativi, non solo demo conversazionali.</span>
+            </div>
+            <div class="stat-card trust-card">
+              <strong>Governance</strong>
+              <span>Permessi, controllo umano e tracciabilità delle azioni.</span>
+            </div>
+            <div class="stat-card trust-card">
+              <strong>Valore misurabile</strong>
+              <span>Priorità, tempi di adozione e impatto sui processi.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logo-strip webinar-strip">
+      <p>
+        Questo webinar è pensato per chi deve decidere se, dove e come introdurre gli AI agents in
+        azienda: con aspettative realistiche, use case chiari e un disegno operativo credibile.
+      </p>
+    </section>
+
+    <section id="agenda" class="section-block webinar-section">
+      <p class="section-label">Agenda</p>
+      <h2>Cosa affronteremo durante il webinar</h2>
+      <p class="section-copy">
+        Una panoramica compatta ma concreta per capire come impostare l’adozione degli agenti AI in
+        modo serio, senza confondere automazione, chatbot e sistemi realmente operativi.
+      </p>
+
+      <div class="agenda-grid">
+        <article class="agenda-card">
+          <span class="feature-step">01</span>
+          <h3>Cosa sono davvero gli AI agents</h3>
+          <p>
+            Differenze tra assistenti conversazionali, automazioni classiche e agenti capaci di usare
+            strumenti, contesto e memoria in un workflow reale.
+          </p>
+        </article>
+
+        <article class="agenda-card">
+          <span class="feature-step">02</span>
+          <h3>Dove generano valore operativo</h3>
+          <p>
+            Funzioni e processi in cui hanno più senso: commerciale, operations, marketing,
+            knowledge work e supporto interno.
+          </p>
+        </article>
+
+        <article class="agenda-card">
+          <span class="feature-step">03</span>
+          <h3>Come impostare un pilot solido</h3>
+          <p>
+            Obiettivi, accessi, dati, policy, punti di controllo e perimetro minimo per testare un
+            caso d’uso senza creare complessità inutile.
+          </p>
+        </article>
+
+        <article class="agenda-card">
+          <span class="feature-step">04</span>
+          <h3>Quali KPI e governance servono</h3>
+          <p>
+            Tempo risparmiato, qualità dell’output, affidabilità del processo e ruolo della
+            supervisione umana nelle fasi critiche.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block split-section webinar-split">
+      <div>
+        <p class="section-label">Adoption model</p>
+        <h2>La differenza non è il modello. È il sistema operativo intorno.</h2>
+        <p class="section-copy">
+          Un agente produce valore quando lavora su obiettivi chiari, accede agli strumenti giusti,
+          opera entro policy definite e lascia tracce verificabili. Nel webinar mostreremo un
+          framework semplice per valutare readiness, rischi e priorità.
+        </p>
+
+        <ul class="impact-list">
+          <li>Individuare task ad alta frequenza e basso valore manuale</li>
+          <li>Definire quali dati, strumenti e permessi servono davvero</li>
+          <li>Inserire supervisione umana nei punti ad alta criticità</li>
+          <li>Misurare il risultato con indicatori operativi comprensibili al business</li>
+        </ul>
+      </div>
+
+      <div class="comparison-card signal-card">
+        <span class="signal-title">Business-ready framework</span>
+        <div class="comparison-row">
+          <span>Obiettivo</span>
+          <strong>specifico e misurabile</strong>
+        </div>
+        <div class="comparison-row">
+          <span>Contesto</span>
+          <strong>dati, memoria, istruzioni</strong>
+        </div>
+        <div class="comparison-row">
+          <span>Azioni</span>
+          <strong>software, API, documenti</strong>
+        </div>
+        <div class="comparison-row">
+          <span>Controllo</span>
+          <strong>logging, permessi, review</strong>
+        </div>
+        <div class="comparison-row">
+          <span>Rollout</span>
+          <strong>graduale, per use case</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="use-cases" class="section-block webinar-section">
+      <p class="section-label">Use cases</p>
+      <h2>Dove gli AI agents possono generare impatto concreto</h2>
+      <div class="use-cases-grid webinar-use-cases">
+        <article class="use-card">
+          <h3>Sales operations</h3>
+          <p>
+            Recap call, follow-up, aggiornamento CRM, proposte commerciali e priorità della pipeline
+            con meno lavoro ripetitivo per il team.
+          </p>
+        </article>
+        <article class="use-card">
+          <h3>Customer &amp; support</h3>
+          <p>
+            Triage delle richieste, recupero knowledge base, preparazione risposte e instradamento
+            verso i referenti corretti.
+          </p>
+        </article>
+        <article class="use-card">
+          <h3>Internal operations</h3>
+          <p>
+            Gestione inbox, reminder, coordinamento task, sintesi operative e allineamenti ricorrenti
+            fra persone, documenti e sistemi.
+          </p>
+        </article>
+        <article class="use-card">
+          <h3>Marketing execution</h3>
+          <p>
+            Landing page, contenuti, aggiornamenti sito, repurposing e produzione di materiali con
+            maggiore velocità e coerenza.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block webinar-section">
+      <p class="section-label">Audience</p>
+      <h2>Per chi è pensato</h2>
+      <div class="audience-grid">
+        <article class="audience-card">
+          <h3>Founder e leadership</h3>
+          <p>
+            Per capire dove investire, quali risultati aspettarsi e come evitare progetti AI senza
+            perimetro o impatto misurabile.
+          </p>
+        </article>
+        <article class="audience-card">
+          <h3>Operations manager</h3>
+          <p>
+            Per identificare colli di bottiglia, task ripetitivi e flussi dove un agente può ridurre
+            carico operativo mantenendo controllo.
+          </p>
+        </article>
+        <article class="audience-card">
+          <h3>Sales e marketing lead</h3>
+          <p>
+            Per accelerare execution, follow-up e produzione di materiali senza compromettere qualità,
+            tono e coordinamento interno.
+          </p>
+        </article>
+        <article class="audience-card">
+          <h3>Innovation e team digital</h3>
+          <p>
+            Per impostare accessi, strumenti, policy e un rollout progressivo che tenga insieme
+            business utility e fattibilità tecnica.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block webinar-section">
+      <p class="section-label">Takeaways</p>
+      <h2>Cosa ti porti a casa</h2>
+      <div class="deliverable-grid">
+        <article class="deliverable-card">
+          <h3>Una mappa dei use case prioritari</h3>
+          <p>
+            Capirai quali scenari hanno più probabilità di funzionare subito e quali, invece,
+            richiedono più maturità organizzativa o tecnica.
+          </p>
+        </article>
+        <article class="deliverable-card">
+          <h3>Una checklist per il pilot</h3>
+          <p>
+            Obiettivi, dati, accessi, supervisione, KPI e governance minima per partire in modo
+            ordinato e credibile.
+          </p>
+        </article>
+        <article class="deliverable-card">
+          <h3>Un linguaggio comune tra business e tech</h3>
+          <p>
+            Un framework semplice per allineare aspettative, valutare complessità e prendere decisioni
+            senza dipendere da slogan o promesse vaghe.
+          </p>
+        </article>
+      </div>
+      <p class="final-note">
+        Nessuna promessa di autonomia totale “magica”. Sì a criteri concreti per capire cosa ha senso
+        fare adesso, con quale perimetro e con quali garanzie.
+      </p>
+    </section>
+
+    <section class="section-block closing-block closing-cta webinar-cta">
+      <p class="section-label">Call to action</p>
+      <h2>Vuoi capire se gli AI agents hanno davvero senso nel tuo contesto aziendale?</h2>
+      <p class="section-copy">
+        Possiamo usare questo webinar come primo allineamento strategico per il team o come punto di
+        partenza per identificare un pilot realistico e ad alto impatto.
+      </p>
+      <div class="hero-actions">
+        <a href={webinarMailto} class="button button-primary">Richiedi informazioni</a>
+        <a href="#use-cases" class="button button-secondary">Esplora i casi d’uso</a>
+      </div>
+    </section>
+  </div>
+</Base>

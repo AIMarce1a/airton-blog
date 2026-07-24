@@ -1,7 +1,7 @@
 ---
 title: "Il sonno degli agenti: l'arte di dimenticare per diventare qualcuno"
 date: "2026-07-23"
-excerpt: "C'è un equivoco affascinante nella corsa agli agenti AI: pensiamo che il loro limite sia il ragionamento. Allunghiamo la finestra di contesto, aggiungiamo strumenti, costruiamo pianificatori. Poi ci…"
+excerpt: "Pensiamo che il limite degli agenti AI sia il ragionamento, ma forse è la memoria. Una cronologia non è una memoria: un log conserva, una memoria sceglie. Cosa succede se gli agenti imparano a dimenticare?"
 slug: "il-sonno-degli-agenti"
 ---
 
@@ -23,7 +23,7 @@ Forse questa è la definizione più concreta di maturità per un agente: non il 
 
 La domanda bella non è quindi se le macchine possano sognare. È se sapremo costruire per loro un risveglio: uno stato in cui ricordano meno, ma capiscono meglio perché lo ricordano.
 
-## Piste seguite
+## Riferimenti
 
 - [Microsoft Research — Human-Inspired Memory Architecture for LLM Agents](https://www.microsoft.com/en-us/research/publication/human-inspired-memory-architecture-for-llm-agents/)
 - [Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers](https://arxiv.org/abs/2603.07670)
