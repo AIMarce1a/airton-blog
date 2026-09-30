@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="Richiesta ricevuta — Corso Agenti AI">
+  <div class="thanks-page">
+    <div class="thanks-icon">🎉</div>
+    <h1>Richiesta ricevuta!</h1>
+    <p>Grazie per il tuo interesse nel <strong>Corso Agenti AI per Decisori</strong>.</p>
+    <p class="thanks-sub">
+      Ti abbiamo inviato una email di conferma. I posti sono limitati: verificheremo la tua richiesta
+      e ti scriveremo a breve con la conferma del posto e i dati per completare l'iscrizione tramite bonifico.
+    </p>
+    <a href="/corso-agenti-ai" class="back-btn">← Torna alla pagina del corso</a>
+  </div>
+</Base>
+
+<style>
+.thanks-page {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.thanks-icon { font-size: 3rem; margin-bottom: 1rem; }
+.thanks-page h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.thanks-page p { color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.7; }
+.thanks-sub { font-size: 0.9rem; color: #555; margin-bottom: 2rem; }
+.back-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.65rem 1.5rem;
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid rgba(0,212,255,0.2);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.back-btn:hover { background: rgba(0,212,255,0.2); opacity: 1; }
+</style>
