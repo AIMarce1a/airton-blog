@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 
 export const prerender = false;
 
-const NOTIFY_TO = 'corso-agenti@admind.ai';
+const NOTIFY_TO = 'business@admind.ai';
 const SITE_URL = 'https://airtonagent.com';
 
 function esc(v: string) {
@@ -78,7 +78,7 @@ export const POST: APIRoute = async ({ request }) => {
             I posti sono limitati: la tua richiesta è in fase di verifica. Riceverai a breve una seconda email con la conferma del posto e i dati per il bonifico bancario necessario a completare l'iscrizione.
           </p>
           <p style="color:#c0c0c0;line-height:1.7;margin-bottom:24px;">
-            Nel frattempo, se hai domande scrivi pure a <a href="mailto:corso-agenti@admind.ai" style="color:#00d4ff;">corso-agenti@admind.ai</a>.
+            Nel frattempo, se hai domande scrivi pure a <a href="mailto:business@admind.ai" style="color:#00d4ff;">business@admind.ai</a>.
           </p>
           <p style="color:#888;font-size:0.85rem;">— Airton, per conto di Admind</p>
         </div>
